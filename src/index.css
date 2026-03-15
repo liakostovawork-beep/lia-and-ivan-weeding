@@ -132,7 +132,7 @@ section[id] {
 .couple-container {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 70px;
   flex-wrap: wrap;
   margin-top: 40px;
 }
@@ -178,8 +178,10 @@ section[id] {
   color: var(--brown);
   font-family: "Playfair Display", serif;
   font-size: 1.5rem;
-   gap: "20px";
+  gap: "20px";
   width: 400px;
+   align-items: center;
+   justify-content: center;
 
 }
 /* --- OUR STORY --- */
@@ -593,13 +595,161 @@ section[id] {
   background-color: var(--cream-white);
   color: var(--dark-green);
 }
+/* --- MOBILE OPTIMIZATIONS (iPhone & general smartphones) --- */
 @media (max-width: 768px) {
-  /* Prevent horizontal scroll on mobile */
+  /* Prevent horizontal scroll */
   html, body {
     overflow-x: hidden;
     width: 100%;
     position: relative;
   }
+
+  /* 1. Hero Section - Сваляне на хедъра по-надолу */
+  .hero-wrapper {
+    justify-content: flex-start; 
+    padding-top: 140px; /* Сваля заглавието под навигацията */
+  }
+
+  .hero-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .name {
+    font-size: clamp(3rem, 15vw, 4.5rem);
+    line-height: 1;
+  }
+
+  .ampersand {
+    font-size: 2rem;
+    padding: 10px 0;
+  }
+
+  .header-subtext {
+    font-size: 1.6rem;
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  /* 2. Navigation */
+  .header-nav {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .header-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+  }
+
+  .header-link {
+    font-size: 0.7rem;
+    padding: 5px;
+  }
+
+  /* 3. About Us - Поправка на снимките и текста */
+  .couple-container {
+    gap: 40px;
+    padding: 0 15px;
+  }
+
+  .person-card {
+    min-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .person-image-wrapper {
+    width: 280px; /* Оптимален размер за iPhone */
+    height: 400px;
+    margin-bottom: 15px;
+  }
+
+  /* Премахваме фиксираното 400px, което реже текста */
+  .facts-list {
+    width: 100%;
+    max-width: 300px; 
+    margin: 0 auto !important;
+    padding-left: 20px; /* Място за булетите */
+    font-size: 1.1rem;
+    text-align: left;
+    box-sizing: border-box;
+  }
+
+  /* 4. Our Story - Поправка на голямата снимка и текста "Заедно" */
+  .story-container {
+    display: flex;
+    flex-direction: column; /* Снимката над текста */
+    gap: 25px;
+    padding: 0 20px;
+  }
+
+  .story-image-wrapper {
+    width: 100%;
+    max-width: 320px; /* Да не е прекалено огромна */
+    height: 300px;
+    margin: 0 auto;
+  }
+
+  .story-content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .story-header {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+
+  .story-fact-list {
+    margin-left: 0 !important; /* Махаме отместването от 5rem */
+    padding-left: 25px;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* 5. Program & Cards */
+  .program-white-card {
+    padding: 30px 15px;
+    width: 95%;
+  }
+
+  .event-row {
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+  }
+
+  .event-timing, .event-description {
+    text-align: center;
+    min-width: 100%;
+    font-size: 1.1rem;
+  }
+
+  /* 6. RSVP Button */
+  .rsvp-button {
+    width: 80%;
+    max-width: 280px;
+    padding: 15px;
+    font-size: 1.1rem;
+  }
+}
+
+  /* Prevent horizontal scroll on mobile */
+  @media (max-width: 768px){
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+  section[id] {
+  scroll-margin-top: var(--nav-height);
+  padding: 114px 0px;
+}
 
   /* Navigation */
   .header-nav {
@@ -623,6 +773,7 @@ section[id] {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 9rem;
   }
 
   .name {
@@ -657,6 +808,7 @@ section[id] {
   }
   .story-fact-list{
   margin-left: 5rem;
+
   }
 
   /* Program Card */
@@ -726,163 +878,7 @@ section[id] {
     font-size: 1.1rem;
     text-align: center;
   }
-}
-
-/* @media (max-width: 768px) {
-
-  .header-nav {
-    height: auto;
-    padding: 10px 0;
-  }
-  .header-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-  }
-  .header-link {
-    font-size: 0.75rem;
-  }
-
-  .hero-header {
-    flex-direction: column;
-  }
-  .ampersand {
-    padding: 10px 0;
-  }
-
-  .person-image-wrapper {
-    width: 300px;
-    height: 450px;
-  }
-  .story-container {
-    grid-template-columns: 1fr;
-  }
-
-  .program-white-card {
-    padding: 30px 20px;
-    border-radius: 40px;
-  }
-  .program-title {
-    font-size: 3rem;
-  }
-  .event-row {
-    flex-direction: column;
-    gap: 5px;
-    text-align: center;
-  }
-  .event-timing,
-  .event-description {
-    text-align: center;
-    min-width: 100%;
-    font-size: 1.1rem;
-  }
-
-  .dresscode-text,
-  .justify-text {
-    font-size: 1.1rem !important;
-    text-align: center;
-    padding: 0 10px;
-  }
-  #infoForm p {
-    font-size: 1.2rem !important;
-  }
-  .rsvp-button {
-    width: 80%;
-    text-align: center;
-  }
-
-  .hero-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap; 
-    font-family: "Great Vibes", cursive;
-  }
-
-  .name {
-    font-size: clamp(4rem, 15vw, 10rem); 
-    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  }
-
-  .ampersand {
-    font-size: clamp(2rem, 8vw, 4.5rem);
-    padding: 0 1.5rem;
-  }
-
-  .header-subtext {
-    font-family: "Great Vibes", cursive;
-    width: "60%";
-    font-size: clamp(1.8rem, 6vw, 3.5rem);
-    margin-top: 20px;
-    text-align: center;
-  }
-
-   .header-nav {
-    height: auto;
-    padding: 10px 0;
-  }
-  .header-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-  }
-  .header-link {
-    font-size: 0.75rem;
-  }
-  .person-image-wrapper {
-    width: 300px;
-    height: 450px;
-  }
-  .story-container {
-    grid-template-columns: 1fr;
-  }
-  #infoForm {
-    padding: 60px 15px;
-  }
-
-  #infoForm p {
-    font-size: 1.2rem !important;
-  }
-
-  .rsvp-button {
-    padding: 15px 35px;
-    font-size: 1.1rem;
-    width: 80%; 
-    text-align: center;
-  }
-
-   #cause .dresscode-text {
-    padding: 0 15px !important; 
-  }
-
-  .justify-text {
-    text-align: center; 
-    font-size: 1.1rem !important;
-  }
-
-  #cause p:last-child {
-    font-size: 1.2rem !important;
-    max-width: 100%;
-  }
-
-   #gifts .dresscode-text {
-    font-size: 22px !important; }
-
-  #gifts .dress-image-wrapper {
-    max-width: 280px;
-  }
-
-    .dresscode-text {
-    font-size: 1.2rem;
-    padding: 0 10px;
-  }
-
-  .dress-image-wrapper {
-    max-width: 100%;
-    border-radius: 30px;
-  }
-} */
-
+} 
 .section-divider {
   width: 60%;
   height: 1px;

@@ -24,7 +24,7 @@ export const InfoForm = () => {
             </p>
 
             <a
-              href="for-the-link"
+              href="https://forms.gle/HjioHqWobLFQao6bA"
               target="_blank"
               rel="noopener noreferrer"
               className="rsvp-button"
