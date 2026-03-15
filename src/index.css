@@ -680,23 +680,30 @@ section[id] {
   }
 
   /* 4. Our Story - Поправка на голямата снимка и текста "Заедно" */
-  .story-container {
-    display: flex;
-    flex-direction: column; /* Снимката над текста */
-    gap: 25px;
-    padding: 0 20px;
-  }
-
-  .story-image-wrapper {
+.story-container {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* Центрира децата хоризонтално */
+    gap: 20px;
     width: 100%;
-    max-width: 320px; /* Да не е прекалено огромна */
-    height: 300px;
-    margin: 0 auto;
   }
 
+  /* Сега центрираме самата обвивка на снимката */
+  .story-image-wrapper {
+    display: block;
+    width: 90%; /* Или фиксирано, напр. 300px */
+    max-width: 350px;
+    margin: 0 auto !important; /* Форсира центрирането */
+    float: none; /* За всеки случай, ако има остатъчен float */
+  }
+
+  /* Центрираме и текста под нея */
   .story-content {
     width: 100%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    
   }
 
   .story-header {
@@ -706,10 +713,13 @@ section[id] {
   }
 
   .story-fact-list {
-    margin-left: 0 !important; /* Махаме отместването от 5rem */
-    padding-left: 25px;
-    width: 100%;
-    max-width: 300px;
+  width: 100%;
+    max-width: 300px; 
+    margin: 0 auto !important;
+    padding-left: 20px; /* Място за булетите */
+    font-size: 1.1rem;
+    text-align: left;
+    box-sizing: border-box;
   }
 
   /* 5. Program & Cards */

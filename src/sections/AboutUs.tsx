@@ -28,7 +28,7 @@ export const AboutUs = () => {
             </div>
             <h3 className="person-name">Булката</h3>
             <ul className="facts-list left-fact-list">
-              <li>Жизнерадостна и експесивна.</li>
+              <li>Жизнерадостна и експресивна.</li>
               <li>Пее повече от феноменално.</li>
               <li>Най-голямата фенка на Агата Кристи.</li>
               <li>Поддържа нездравословен култ към СМГ.</li>
