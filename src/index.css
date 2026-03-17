@@ -607,7 +607,7 @@ section[id] {
   /* 1. Hero Section  */
   .hero-wrapper {
     justify-content: flex-start; 
-    padding-top: 90px; /*navigation - header padding */
+    padding-top: 110px; /*navigation - header padding */
   }
 
   .hero-header {
