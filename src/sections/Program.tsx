@@ -14,7 +14,7 @@ export const Program = () => {
     },
     {
       startTime: "17:00",
-      endTime: "17:45",
+      endTime: "18:00",
       description: "Снимки, подаръци и поздравления",
     },
     { startTime: "18:00", endTime: "22:00", description: "Официална вечеря" },

@@ -11,7 +11,7 @@ export const Dresscode = () => {
             Белите сватбарски ризи вкъщи оставете,
           </div>
           <div className="dresscode-text">черно и червено също не носете,</div>
-          <div className="dresscode-text">но от там на сетне,</div>
+          <div className="dresscode-text">но от там насетне,</div>
           <div className="dresscode-text">
             нека всеки в щур пастелен цвят да блесне!
           </div>
