@@ -604,10 +604,10 @@ section[id] {
     position: relative;
   }
 
-  /* 1. Hero Section - Сваляне на хедъра по-надолу */
+  /* 1. Hero Section  */
   .hero-wrapper {
     justify-content: flex-start; 
-    padding-top: 140px; /* Сваля заглавието под навигацията */
+    padding-top: 90px; /*navigation - header padding */
   }
 
   .hero-header {

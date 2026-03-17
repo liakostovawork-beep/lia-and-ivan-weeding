@@ -62,6 +62,7 @@ export const Header = () => {
         <div className="header-subtext">
           Ще се радваме да отпразнуваме нашата сватба заедно!
         </div>
+        <div className="header-subtext">20.07.2026</div>
       </div>
 
       <nav className="header-nav">
